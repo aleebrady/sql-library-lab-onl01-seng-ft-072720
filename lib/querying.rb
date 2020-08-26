@@ -21,5 +21,6 @@ ON character_books.character_id = characters.id WHERE characters.species = 'huma
 end
 
 def select_character_names_and_number_of_books_they_are_in
-  "Write your SQL query here"
+  "Select characters.name, Count(*) As book_appearances From character_books Join characters 
+On character_books.character_id = characters.id Group By characters.name Order By book_appearances Desc;"
 end
